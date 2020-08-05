@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top left, #4be5f4, #8bff3b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
