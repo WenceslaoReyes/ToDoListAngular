@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Task } from './models/task.model';
-import { ToDoListService } from './services/to-do-list-service.service';
+import { ToDoListService } from './services/to-do-list-service';
 
 
 @Component({
@@ -11,7 +11,6 @@ import { ToDoListService } from './services/to-do-list-service.service';
 export class AppComponent {
   title = 'my-to-do-list';
   taskList: Task[];
-  editedTask : Task;
   constructor(private service:ToDoListService)
   {
     this.taskList = service.taskList;
@@ -35,17 +34,4 @@ export class AppComponent {
     this.service.deleteAll();
     this.taskList = this.service.taskList;
   }
-
-  // editTask(task)
-  // {
-  //   if(task)
-  //   {
-  //     this.editedTask = task;
-  //   }
-  // }
-
-  // readyToEdit(task :Task)
-  // {
-    
-  // }
 }
