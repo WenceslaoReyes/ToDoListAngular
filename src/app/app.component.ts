@@ -36,16 +36,16 @@ export class AppComponent {
     this.taskList = this.service.taskList;
   }
 
-  editTask(task)
-  {
-    if(task)
-    {
-      this.editedTask = task;
-    }
-  }
+  // editTask(task)
+  // {
+  //   if(task)
+  //   {
+  //     this.editedTask = task;
+  //   }
+  // }
 
-  readyToEdit(task :Task)
-  {
+  // readyToEdit(task :Task)
+  // {
     
-  }
+  // }
 }

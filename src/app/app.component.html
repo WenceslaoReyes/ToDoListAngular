@@ -1,7 +1,8 @@
 <app-header></app-header>
 <main>
     <div class="container">
-        <app-add-item [editedTask]="editedTask" (newTask)="addNewTask($event)" (editTask)="readyToEdit($event)"></app-add-item>
+        <!-- <app-add-item [editedTask]="editedTask" (newTask)="addNewTask($event)" (editTask)="readyToEdit($event)"></app-add-item> -->
+        <app-add-item (newTask)="addNewTask($event)"></app-add-item>
         <table class="to-do-table">
             <thead>
                 <tr class="header-row">
@@ -14,14 +15,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let task of taskList" class="to-do-task">
+                <tr *ngFor="let task of taskList" class="to-do-task animated">
                     <td class="name-cell">
                         <div>
                             {{task.name}}
                         </div>
                     </td>
                     <td class="img-cell">
-                        <button class="img edit-button" (click)="editTask(task)"><i class="fas fa-pen"></i></button>
+                        <!-- <button class="img edit-button" (click)="editTask(task)"><i class="fas fa-pen"></i></button> -->
                         <img class="img" src="assets/remove.svg" alt="recycle" (click)="deleteTask(task.id)">
                     </td>
                 </tr>
